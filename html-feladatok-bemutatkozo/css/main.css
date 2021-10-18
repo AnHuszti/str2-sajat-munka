@@ -1,0 +1,119 @@
+html {
+	background-color: rgb(146, 146, 146);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(29, 38, 56);
+    margin: 10px 0 10px 10px;
+}
+
+nav {
+    font-size: 20px;
+    font-style: bold;
+}
+
+ul.links {
+    list-style-type: none;
+    margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(252, 191, 191);
+  }   
+
+li a {
+    display: block;
+    float: left;
+    text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+label, input, textarea {
+    display: block;
+    margin: 10px;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+button {
+    background-color: rgb(252, 191, 191);
+    padding: 5px;
+}
+
+.header {
+    width: 80%;
+    margin: 15px 0 15px 0;
+}
+
+.image {
+    width: 60%;
+}
+
+.box {
+    display: inline-block;
+    width: 20%;
+    padding: 10px 5px 10px 5px;
+    background-color: rgb(252, 191, 191);
+    text-align: center;
+}
+
+.project {
+    margin: 10px 10px 40px 10px;
+    float: none;
+    width: 100%;
+    box-shadow: 5px 5px 5px rgb(29, 38, 56);
+}
+.project img {
+    width: 60%;
+    padding: 0 15px 0 15px;
+}
+
+.desc {
+    padding: 0 15px 0 15px;
+    text-align: justify;
+  }
+
+.gallery {
+    
+    margin: 10px;
+    float: none;
+    width: 70%;
+    box-shadow: 5px 5px 5px rgb(29, 38, 56); 
+}
+.gallery img {
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .header {
+        width: 60%;
+        margin: 15px 0 15px 0;
+    }
+    .project {
+        margin: 10px 10px 40px 10px;
+        width: 70%;
+        min-height: 250px;
+    }
+    .project img {
+        width: 200px;
+        float: left;
+        
+    }
+
+    .desc {
+        padding: 0 40px 10px 40px;
+        text-align: justify;
+      }
+
+    .gallery {
+      float: left;
+      width: 25%;
+    }
+    .gallery img {
+        width: 100%;
+    }
+}
