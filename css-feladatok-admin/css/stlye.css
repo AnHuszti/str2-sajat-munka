@@ -14,11 +14,6 @@ body {
     padding: .5rem;
 }
 
-/* h3 {
-    margin-block-end: 0px;
-    padding: .5rem;
-} */
-
 .header__title {
     display: inline;
     line-height: 3rem;
@@ -166,3 +161,22 @@ h1 {
         border-bottom-left-radius: .25rem;
         border-bottom-right-radius: .25rem;
 }
+
+@media screen and (max-width: 700px) {
+    .main__nav {
+        width: 10%;
+    }
+
+    .menu__link, .menu__title {
+        display: none;
+    }
+
+    .flex-container {
+        display: block;
+        margin-right: 40px;
+    }
+
+    .main_card {
+        width: 100%;
+    }
+  }
