@@ -18,7 +18,6 @@ body {
 }
 
 .modal {
-    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -27,6 +26,12 @@ body {
     height: 100%;
     background-color: rgb(22, 22, 22); /* Fallback color */ 
     background-color: rgba(22,22,22,0.4);
+    visibility: hidden;
+    transition: visibility 3s;
+  }
+  
+  .modal.show {
+    visibility: visible;
   }
 
   .modal-content {
@@ -40,7 +45,6 @@ body {
     padding: 10px 10px 30px 10px;
     font-size: auto;
     text-align: justify;
-    animation: openModal 5s;
   }
 
   .close {
@@ -82,9 +86,4 @@ body {
 
   @media only screen and (min-width: 560px) {
     .modal-content {width: 50%;}   
-  }
-
-  @keyframes openModal {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
   } 
