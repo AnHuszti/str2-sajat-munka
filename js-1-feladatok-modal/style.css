@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button {
+  cursor: pointer;
+}
+
+#myButton {
+  margin-top: 5%;
+  border: 0;
+  width: 140px;
+  height: 70px;
+  background-color: #dd6644;
+  color: #fefefe;
+  font-size: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 22, 22); /* Fallback color */ 
+    background-color: rgba(22,22,22,0.4);
+  }
+
+  .modal-content {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50% );
+    background-color: #fefefe;
+    margin: auto;
+    width: 100%;
+    padding: 10px 10px 30px 10px;
+    font-size: auto;
+    text-align: justify;
+    animation: openModal 5s;
+  }
+
+  .close {
+    border: 0;
+    background-color: transparent;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+  .modal-header  {
+    padding: 30px 20px 0 20px;
+    font-size: larger;
+    font-weight: 700;
+    color: #556622;
+  }
+
+  .modal-text, .modal-footer {
+    padding: 0 20px;
+    color: #556622;
+  }
+
+  .modal-btn {
+    float: right;
+    border: 0;
+    width: 80px;
+    height: 30px;
+  }
+
+  #greenBtn {
+    background-color: #556622;
+    color: #fefefe;
+  }
+  #redBtn {
+    background-color: #dd6644;
+    color: #fefefe;
+  }
+
+  @media only screen and (min-width: 560px) {
+    .modal-content {width: 50%;}   
+  }
+
+  @keyframes openModal {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  } 
