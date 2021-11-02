@@ -20,9 +20,7 @@ const changeMatrixValue = (element) => {
 
 const deleteSigns = () => {
     const cells = document.querySelectorAll(".cell");
-  for (i = 0; i < cells.length; i++) {
-    cells[i].textContent = " "
-  } 
+  cells.forEach(cell => cell.textContent = " ")
 }
 
 const increaseCounter = () => stepCount += 1;
@@ -46,12 +44,12 @@ const handleClick = (event) => {
 
 const addClickListener = () => {
     const cells = document.querySelectorAll(".cell");
-    Array.from(cells).forEach(cell => cell.addEventListener('click', handleClick))
+    cells.forEach(cell => cell.addEventListener('click', handleClick))
 }
 
 const removeAllClickListeners = () => {
     const cells = document.querySelectorAll(".cell");
-    Array.from(cells).forEach(cell => cell.removeEventListener('click', handleClick))
+    cells.forEach(cell => cell.removeEventListener('click', handleClick))
 }
 
 const checkValues = (array) => array.map(row => {
