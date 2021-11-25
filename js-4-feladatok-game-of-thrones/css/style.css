@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+}
+
+section {
+    height: 100vh;
+    background-image: url(../assets/site/mapblue.jpg);
+    background-size: 78vw;
+}
+
+aside {
+    float: right;
+    background-color: #222222;
+    width: 22%;
+    height: 100vh;
+}
+
+h4 {
+    font-family: myFirstFont;
+    font-weight: lighter;
+    line-height: 1.4em;
+    color: #dddddd;
+    text-align: center;
+    padding: 10px;
+}
+
+.result {
+    height: 70vh;
+}
+
+.picture__container {
+    margin: 10px;
+}
+
+.picture {
+    width: 100%
+}
+
+.character__label{
+    margin: 10px;
+
+}
+
+h5 {
+    display: inline-block;
+    margin: 10px 0;
+    font-family: myFirstFont;
+    color: #dddddd;
+    font-weight: lighter;
+    width: 90%;
+}
+
+.shield {
+    position: absolute;
+    margin-top: 8px;
+    width: 2%;
+    float: left;
+}
+
+.bio {
+    margin: 10px;
+    padding-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    text-align: justify;
+    color: #dddddd;
+}
+
+.searchField {
+    margin-right: 10px;
+    padding: 30px 10px;
+}
+
+.search__btn {
+    background-color: #222222;
+    margin-right: 0.8vw;
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
+    padding: 4px 6px 2px 7px;
+}
+
+.search__input {
+    position: absolute;
+    border: none;
+    width: 11vw;
+    line-height: 1.3em;
+    padding: 3px;
+    float: left;
+}
+
+.fa-search {
+    background-color: #ffffff;
+    border: none;
+    padding: 3px 4px 4px 4px;
+    color: #222222;
+}
+
+.fa-chevron-right {
+    text-align: center;
+    color: #eeeeee;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 9vw 9vw 9vw 9vw 9vw 9vw 9vw 9vw;
+    grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh;
+    padding: 20px; 
+}
+
+.portrait {
+    width: 5vw;
+    padding-left: 1vw;
+}
+
+.portrait:hover, .name__label:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+.name__label {
+    margin: 0;
+    width: 7vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/Game\ of\ Thrones.ttf);
+  }
+
+@media only screen and (max-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: 14vw 14vw 14vw 14vw;
+        grid-template-rows: 16vw 16vw 16vw 16vw 16vw 16vw 16vw 16vw 16vw 16vw 16vw 16vw;
+        padding: 20px;
+    }
+
+    .portrait {
+        width: 8vw;
+        padding-left: 1vw;
+    }
+
+    .name__label {
+        margin: 0;
+        width: 11vw;
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+    }
+
+    aside {
+        float: right;
+        width: 40%;
+        height: 100vh;
+    }
+
+    .fa-search {
+        display: none;
+    }
+
+    .search__input {
+        width: 24vw;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        display: grid;
+        grid-template-columns: 28vw 28vw;
+        grid-template-rows: 31vw 31vw 31vw 31vw 31vw 31vw 31vw 31vw
+                            31vw 31vw 31vw 31vw 31vw 31vw 31vw 31vw
+                            31vw 31vw 31vw 31vw 31vw 31vw 31vw 31vw;
+        padding: 20px;
+    }
+
+    .portrait {
+        width: 16vw;
+        padding-left: 1vw;
+    }
+
+    .name__label {
+        margin: 0;
+        width: 23vw;
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+    }
+
+    aside {
+        float: right;
+        width: 40%;
+        height: 100vh;
+    }
+}
