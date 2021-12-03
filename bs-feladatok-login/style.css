@@ -1,0 +1,12 @@
+#monogramm {
+    width: fit-content;
+    margin: auto;
+    border-radius: 12px;
+    padding: 4px 15px;
+    background-color: #a991a9;
+    color: #fff;
+    font-family:sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 4rem;
+}
