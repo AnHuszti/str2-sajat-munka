@@ -1,0 +1,5 @@
+dandelion yellow: #fdcc52
+gradient_start_crimson red: #d92433
+gardient_middle: #ae3361 to alternative background
+gradient_end_violet: #7d4296
+

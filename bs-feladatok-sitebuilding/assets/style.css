@@ -1,0 +1,144 @@
+h1, nav {
+    font-family: myH1Font, Helvetica, Arial, sans-serif !important;
+}
+
+button {
+    font-family: myBtnFont, Helvetica, Arial, sans-serif !important;
+    font-size: 6px;
+}
+
+p, footer {
+    font-family: myPFont, Helvetica, Arial, sans-serif !important;
+}
+
+p {
+    line-height: normal;
+    font-size: 9px;
+}
+
+footer p, footer ul {
+    font-size: 0.4rem;
+    line-height: normal;
+}
+
+@font-face {
+    font-family: myH1Font;
+    src: url(../fonts/Catamaran-VariableFont_wght.ttf);
+    font-weight: 300;
+  }
+
+@font-face {
+    font-family: myBtnFont;
+    src: url(../fonts/Lato-Thin.ttf);
+  }
+
+@font-face {
+    font-family: myPFont;
+    src: url(../fonts/Mulish-VariableFont_wght.ttf);
+    font-weight: 300;
+  }
+
+#brand {
+    color: #fdcc52;
+}
+
+#brand:hover, #nav-dl:hover, #nav-features:hover, #nav-contact:hover {
+    color: #fff;
+}
+
+/* @media screen and (min-width: 992px) { 
+    h1 {
+        font-size: 4rem;
+        font-weight: 200;
+    }
+  } */
+
+.grad {
+    background-color: #ae3361; /* For browsers that do not support gradients */
+    background-image: url('../img/bg-pattern.png'), linear-gradient(to right, #d92433, #7d4296);
+}
+
+.navbar {
+    background-color: white;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar {
+        background-color: transparent;
+    }
+}
+
+.newAgeDiv {
+    margin-top: 10vh;
+}
+
+@media screen and (min-width: 992px) {
+    #newAgeDiv-text {
+        font-size: 2rem;
+        font-weight: 200;
+    }
+}
+
+button.btn {
+    border-radius: 50px;
+    font-size: 8px;
+}
+
+.screenImg {
+    height: 57.5%;
+}
+
+.yellowBlock {
+    background-color: #fdcc52;
+}
+
+.phoneContainer {
+    min-height: 75vh;
+}
+
+.fa-icons {
+    color: #ae3361;
+    font-size: 2.5rem;
+    line-height: 2rem;
+}
+
+h1.border-top {
+    border-color: #ae3361;
+}
+
+.photoBg {
+    background: url(../img/bg-cta.jpg); 
+    background-size: cover;
+    background-position: center;
+}
+
+.opaqueBg {
+    background-color: #00000070;
+}
+
+.btn:hover {
+    transition: all ease-in-out 3s;
+    background-color: #fdcc52;
+    border-color: #fdcc52;
+    color: black;
+    font-weight: bolder;
+}
+
+.socMedia {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    opacity: .9;
+    transition: opacity ease-in-out;
+}
+
+.socMedia:hover {
+    opacity: 1;
+} 
+.bg-fb {
+    background-color: #4267B2; 
+}
+
+.modal-link:hover {
+    color: #fdcc52
+}
