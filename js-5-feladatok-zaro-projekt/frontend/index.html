@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+                <table id="newUserTable" class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>ADDRESS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ADD NEW USER</td>
+                            <td><input type="text" class="newUserInput" name="name"></td>
+                            <td><input type="text" class="newUserInput" name="email"></td>
+                            <td><input type="text" class="newUserInput" name="address"></td>
+                            <td><button type="submit" class="btn btn-add" onclick="addNewHandler(this)">add</button></td> 
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+
+    <div class="container">
+        <!-- <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8"> -->
+        <table id="userTable" class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>ADDRESS</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <!-- </div>
+        </div> -->
+    </div>
+
+    <div class="modal">
+        <div >  <!---- class="modal-content" ---->
+            <span class="close">&times;</span>
+            <p></p>
+        </div>
+    </div>
+
+    <script type="module">
+        import "./assets/js/app.js"
+        import {addNewHandler, cancelClickHandler, saveClickHandler} from "./assets/js/app.js" 
+        window.addNewHandler = addNewHandler;
+        window.cancelClickHandler = cancelClickHandler;
+        window.saveClickHandler = saveClickHandler;
+    </script>
+</body>
+
+</html>
