@@ -1,0 +1,327 @@
+@use 'modules/buttons';
+@use 'modules/colors';
+@use 'modules/fonts';
+@use 'modules/mixins';
+@use 'sass:color';
+
+.nav {
+    background-color: colors.$light-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    @include mixins.flex-style(initial, center);
+
+    @media screen and (min-width: 992px){
+        background-color: transparent;
+    }
+    
+    &__bg {
+        background-color: colors.$light-color;
+        box-shadow: 0 0 5px color.scale(colors.$light-color, $lightness: -30%);
+    }
+
+    &__container {
+        width: 100%;
+        @include mixins.flex-style(center, initial, row-reverse);
+
+        @media screen and (min-width: 992px){
+            align-items: center;
+        }
+
+        &-brand {
+            justify-content: flex-end;
+        }
+    }
+
+    &__brand {
+        color: colors.$main-color;
+        height: 100%;
+        @include mixins.flex-style(center, initial);
+
+        &:hover{
+            color: colors.$light-color;
+            background-color: color.scale(colors.$light-color, $lightness: -10%);
+            padding: 5px;
+            text-decoration: none;
+        }
+    }
+
+    &__list {
+        display: none;
+        flex-direction: column;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+
+        @media screen and (min-width: 992px) {
+                width: auto;
+                @include mixins.flex-style(initial, initial);
+        }
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__link {
+        color: colors.$dark-color;
+        display: block;
+        line-height: 1rem;
+        padding: 1rem;
+        text-decoration: none;
+
+        &:hover {
+            color: colors.$light-color;
+            background-color: color.scale(colors.$light-color, $lightness: -10%);
+            text-decoration: none;
+        }
+    }
+
+    &__hamburger {
+        border: solid 3px color.scale(colors.$light-color, $lightness: -10%);
+        border-radius: 5px;
+        height: 30px;
+        margin: 10px;
+        user-select: none;
+        width: 60px;
+        @include mixins.flex-style(center, initial);
+    
+        @media screen and (min-width: 40em) {
+            display: none;
+        }
+
+        &-checkbox[type=checkbox] {
+            display: none;
+        
+            &:checked + .nav__list {
+                display: flex;
+            }
+        }
+        
+        &-label {
+            box-sizing: content-box;  
+            flex-wrap: wrap;
+            height: .75rem;
+            margin: 0;
+            padding: 0.75rem 0rem;
+            width: 1.2rem;
+            @include mixins.flex-style(center, initial);
+                
+            @media screen and (min-width: 992px) {
+                display: none;
+            }
+        }
+            
+        &-menu {
+            display: flex;
+            margin: 0 auto;
+        }
+
+        &-line {
+            background-color: colors.$dark-color;
+            display: block;
+            height: 1px;
+            width: .8rem;
+        }  
+    }    
+}
+
+.startsection {
+    &__grad {
+        background-color: colors.$gradient-middle-color; /* For browsers that do not support gradients */
+        background-image: url('../img/bg-pattern.png'), linear-gradient(to right, colors.$gradient-start-color, colors.$gradient-end-color);
+        height: 100vh;
+    }
+
+    &__container {
+        height: 100%;
+        margin: auto;
+    }
+
+    &__elements {
+        flex-wrap: wrap;
+        height: 75%;
+        @include mixins.flex-style(flex-start, initial);
+
+        @media screen and (min-width: 992px) {
+            align-content: center;
+            height: 100%;
+            //padding-top: 5rem;
+        }
+    }
+
+    &__textDiv {
+        margin-top: 8vh;
+        text-align: center;
+
+        @media screen and (min-width: 992px) {
+            padding: 4rem 0;
+            text-align: left;
+        }
+    }
+
+    &__text {
+        color: colors.$light-color;
+        font-size: 1.2rem;
+        font-weight: 100;
+        margin-bottom: 0;
+        padding: 1rem 2rem;
+
+        @media screen and (min-width: 992px) {
+                font-size: 1.5rem;
+                padding: 2rem 0;
+        }
+    }
+
+    &__phonecontainer {
+        padding-bottom: 2rem;
+        @include mixins.phone-style(100%);
+
+        @media screen and (min-width: 992px) {
+            padding-bottom: 0;
+            //margin-top: 5rem;
+        }
+    }
+}
+
+.downloadsection {
+    background-color: colors.$main-color;
+
+    &__container {
+        padding: 5rem 0;
+        @include mixins.flex-style(center, center, column);
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__linkContainer {
+        flex-direction: column;
+
+        @media screen and (min-width: 992px) {
+            flex-direction: row;
+        }
+    }
+    
+    &__link {
+        margin: .25rem .25rem;
+    }
+}
+
+.featuresection {
+    height: 200vh;
+
+    @media screen and (min-width: 992px){
+        height: auto;
+    }
+
+    &__text {
+        margin: 4rem 2rem 0 2rem;
+        text-align: center;
+    }
+
+    &__elements {
+        @include mixins.flex-style(center, center);
+    }
+
+    &__phonecontainer {
+        @include mixins.phone-style(75vh);
+    }
+    
+    &__container {
+        height: 60vh;
+        @include mixins.flex-style(center, initial);
+
+        &-features {
+            text-align: center;
+
+            &-icon {
+                @include mixins.fa-icons();
+            }
+
+            @include mixins.features(toptext, 3rem);
+            @include mixins.features(bottomtext, 0);
+        }
+    }    
+}
+
+.photosection {
+    background: url(../img/bg-cta.jpg); 
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+
+    &__container {
+        background-color: #00000070;
+        height: 100%;
+        padding-left: 4rem;
+        @include mixins.flex-style(flex-start, center, column);
+
+        @media screen  and (min-width: 992px) {
+            padding-left: 15vw;   
+        }
+
+        &-text {
+            color: colors.$light-color;
+        }
+    }
+}
+
+.socmediasection {
+    &__container {
+        background-color: colors.$main-color;
+        padding: 4rem;
+        text-align: center;
+
+        &-text-span {
+            color: colors.$gradient-start-color;
+        }
+
+        &-nav {
+            @include mixins.flex-style(initial, center);
+
+            &-twitter {
+                @include mixins.socmedia(colors.$twitter-color);
+            }
+            &-facebook {
+                @include mixins.socmedia(colors.$fb-color);
+            }
+            &-pinterest {
+                @include mixins.socmedia(colors.$gradient-start-color);
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: colors.$dark-color;
+    padding: 1rem;
+
+    &__container {
+        text-align: center;
+        color: color.scale(colors.$light-color, $lightness: -30%);
+
+        &-p {
+            margin-bottom: .4rem;
+        }
+
+        &-list {           
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0;
+            @include mixins.flex-style(initial, center);
+
+            &-item {
+                cursor: pointer;
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+.modal-link:hover {
+    color: colors.$main-color;
+}

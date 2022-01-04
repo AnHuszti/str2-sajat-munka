@@ -1,0 +1,61 @@
+@use 'colors';
+
+@mixin fa-icons() {
+    color: colors.$gradient-middle-color;
+    font-size: 2.5rem;
+    line-height: 2rem;
+}
+
+@mixin flex-style($align-items, $justify-content, $flex-direction: row) {
+    align-items: $align-items;
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+
+@mixin phone-style($height) {
+    @include flex-style(center, center);
+    height: $height;
+    position: relative;
+    user-select: none;
+        
+    &-phoneImg {
+        height: 70%;
+        position: absolute;
+    }
+    
+    &-screenImg {
+        height: 54%;
+        position: absolute;
+    }
+}
+
+@mixin features($modifier, $mb) {
+    &-#{$modifier} {
+        margin: 0 auto 3rem auto;
+        width: 50%;
+        
+        @media screen and (min-width: 992px) {
+            margin-bottom: $mb;
+            width: 75%
+        }
+        
+        &-h5 {
+            border-top: solid 1px colors.$gradient-middle-color;
+            padding-top: 1rem; 
+        }
+    }
+}
+
+@mixin socmedia($bg-color) {
+    background-color: $bg-color;
+    height: 30px;
+    opacity: .9;
+    padding: 5px;
+    transition: opacity ease-in-out;
+    width: 30px;
+    
+    &:hover {
+        opacity: 1;
+    }
+} 

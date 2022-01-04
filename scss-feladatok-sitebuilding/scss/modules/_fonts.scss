@@ -1,0 +1,42 @@
+h1, h3, h5, nav {
+    font-family: myHFont, Helvetica, Arial, sans-serif !important;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+button {
+    font-family: myBtnFont, Helvetica, Arial, sans-serif !important;
+    font-size: 8px;
+}
+
+p {
+    line-height: normal;
+    font-size: 11px;
+}
+
+p, footer {
+    font-family: myPFont, Helvetica, Arial, sans-serif !important;
+} 
+
+footer p, footer ul {
+    font-size: 0.4rem;
+    line-height: normal;
+}
+
+@font-face {
+    font-family: myHFont;
+    src: url(../fonts/Catamaran-Thin.ttf);
+  }
+
+@font-face {
+    font-family: myBtnFont;
+    src: url(../fonts/Lato-Thin.ttf);
+  }
+
+@font-face {
+    font-family: myPFont;
+    src: url(../fonts/Mulish-VariableFont_wght.ttf);
+    font-weight: 300;
+  }

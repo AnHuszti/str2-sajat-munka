@@ -1,0 +1,19 @@
+@use 'colors';
+@use 'fonts';
+
+.btns {
+    background-color: transparent;
+    border: solid 2px colors.$light-color;
+    border-radius: 15px;
+    color: colors.$light-color;
+    padding: .3rem 1.6rem;
+    user-select: none;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+        background-color: colors.$main-color;
+        border-color: colors.$main-color;
+        color: colors.$dark-color;
+        font-weight: bolder;
+    }
+}
